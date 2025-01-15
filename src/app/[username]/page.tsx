@@ -8,10 +8,11 @@ import type { Book } from "@prisma/client"
 import { auth } from "~/server/auth"
 
 export default async function UserPage({
-  params: { username },
+  params,
 }: {
-  params: { username: string }
+  params: Promise<{ username: string }>
 }) {
+  const username = (await params).username;
   const session = await auth();
   const isOwnProfile = session?.user?.name === username;
   

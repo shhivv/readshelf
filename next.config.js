@@ -15,6 +15,9 @@ const config = {
         },
         {
             hostname: "preview.redd.it"
+        },
+        {
+            hostname: "external-preview.redd.it"
         }
     ]
     }   
