@@ -17,6 +17,7 @@ datasource db {
 model Book {
     id        Int      @id @default(autoincrement())
     name      String
+    author    String
     status    BookStatus
     coverUrl  String?
     createdAt DateTime @default(now())
@@ -70,7 +71,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
-    posts         Post[]
+    books         Book[]
 }
 
 model VerificationToken {

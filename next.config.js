@@ -5,6 +5,19 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+    images: {
+        remotePatterns: [{
+            hostname: "placehold.co"
+        },
+        {
+            hostname: "eastindiapublishing.com"
+        },
+        {
+            hostname: "preview.redd.it"
+        }
+    ]
+    }   
+};
 
 export default config;
